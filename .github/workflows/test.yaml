@@ -78,7 +78,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: unit-tests-${{matrix.python }}-${{ matrix.jupyter-app }}-${{matrix.jupyterlab-version}}-${{ github.run_number }}
+          name: unit-tests-${{ matrix.python }}-${{ matrix.jupyter-app }}-${{ matrix.jupyterlab-version }}-${{ github.run_number }}
           path: |
             ./build/pytest
             ./build/coverage
@@ -104,7 +104,7 @@ jobs:
       - name: Check the lab extension
         run: |
           jupyter labextension list
-          jupyter labextension list 2>&1 | grep -ie '@jupyterlab/server-proxy.*OK.*'
+          jupyter labextension list 2>&1 | grep -ie '@jupyterhub/jupyter-server-proxy.*OK.*'
           python -m jupyterlab.browser_check
 
       - name: Install Acceptance test dependencies

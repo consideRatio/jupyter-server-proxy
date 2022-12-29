@@ -29,7 +29,7 @@ conda install jupyter-server-proxy
 For JupyterLab 2, ensure `nodejs` is installed and available on `$PATH` and run:
 
 ```bash
-jupyter labextension install @jupyterlab/server-proxy
+jupyter labextension install @jupyterhub/jupyter-server-proxy
 ```
 
 > This will cause:

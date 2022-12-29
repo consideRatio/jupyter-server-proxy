@@ -18,7 +18,7 @@ This repo has more than one package.
 #. The JupyterLab plugin, ``jupyterlab-server-proxy``. This provides the
    launcher icons in JupyterLab. This is packaged into the Python package but
    also published to `NPM
-   <https://www.npmjs.com/package/@jupyterlab/server-proxy>`_ for JupyterLab 2
+   <https://www.npmjs.com/package/@jupyterhub/jupyter-server-proxy>`_ for JupyterLab 2
    compatibility.
 
 #. Various python packages in ``contrib/``. These are convenience packages that
