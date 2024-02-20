@@ -128,6 +128,14 @@ class ProxyHandler(WebSocketHandlerMixin, JupyterHandler):
     # Support all the methods that tornado does by default except for GET which
     # is passed to WebSocketHandlerMixin and then to WebSocketHandler.
 
+    async def prepare(self, *args, **kwargs):
+        # check assumption that prepare is async
+        _prepared = super().prepare()
+        if _prepared is None:
+            import sys
+
+            sys.exit(1)
+
     async def open(self, port, proxied_path):
         raise NotImplementedError("Subclasses of ProxyHandler should implement open")
 
